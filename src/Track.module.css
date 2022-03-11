@@ -1,6 +1,7 @@
 .wrapper {
 	--Track-object-size: 1em;
 	--Track-x: 0;
+	--Track-y: 0;
 	--Track-mask: linear-gradient(
 		to right,
 		transparent,
@@ -19,7 +20,7 @@
 .character,
 .obstacle {
 	position: absolute;
-	bottom: 0;
+	bottom: calc(var(--Track-y) * var(--Track-object-size));
 	left: calc(
 		-1 * var(--Track-object-size) + var(--Track-x) * (100% +
 					var(--Track-object-size))
