@@ -1,0 +1,17 @@
+.wrapper {
+	text-align: center;
+	padding-top: 1em;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.input {
+	-moz-appearance: textfield;
+	width: 2ex;
+	text-align: center;
+	font-size: 3em;
+}

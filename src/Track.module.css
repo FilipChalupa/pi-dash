@@ -1,0 +1,43 @@
+.wrapper {
+	--Track-object-size: 1em;
+	--Track-x: 0;
+	--Track-mask: linear-gradient(
+		to right,
+		transparent,
+		rgba(0, 0, 0, 1) var(--Track-object-size)
+			calc(100% - var(--Track-object-size)),
+		transparent
+	);
+
+	padding-top: 5em;
+	border-bottom: 1px solid;
+	position: relative;
+	-webkit-mask-image: var(--Track-mask);
+	mask-image: var(--Track-mask);
+}
+
+.character,
+.obstacle {
+	position: absolute;
+	bottom: 0;
+	left: calc(
+		-1 * var(--Track-object-size) + var(--Track-x) * (100% +
+					var(--Track-object-size))
+	);
+}
+
+.character {
+	width: var(--Track-object-size);
+	height: var(--Track-object-size);
+	background-color: currentColor;
+	border-radius: 50%;
+}
+
+.obstacle {
+	width: var(--Track-object-size);
+	height: calc(var(--Track-object-size) / 2);
+	border: 1px solid;
+	border-top-left-radius: calc(var(--Track-object-size) / 2);
+	border-top-right-radius: calc(var(--Track-object-size) / 2);
+	border-bottom-width: 0;
+}
